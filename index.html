@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* CSS tambahan untuk mengatur layout */
+      .container {
+        display: flex;
+        flex-direction: column; /* Mengatur arah flex menjadi kolom */
+        align-items: center; /* Memusatkan konten */
+        text-align: center; /* Memusatkan teks */
+      }
+
+      .content {
+        display: flex; /* Menampilkan konten dalam satu baris */
+        align-items: flex-start; /* Menyelaraskan konten di bagian atas */
+        margin-top: 20px; /* Jarak atas dari judul */
+      }
+
+      .photo-frame {
+        margin-right: 20px; /* Jarak antara foto dan teks */
+        flex-shrink: 0; /* Mencegah foto menyusut */
+      }
+
+      .photo-frame img {
+        max-width: 250px; /* Mengatur lebar maksimum gambar lebih besar */
+        height: auto; /* Memastikan tinggi proporsional */
+        border-radius: 10px; /* Menambahkan sudut melengkung jika diinginkan */
+      }
+
+      .message {
+        max-width: 500px; /* Membatasi lebar paragraf */
+        text-align: left; /* Menjaga teks rata kiri */
+      }
+
+      /* Media Query untuk perangkat kecil */
+      @media (max-width: 768px) {
+        .content {
+          flex-direction: column; /* Mengubah arah flex menjadi kolom pada perangkat kecil */
+          align-items: center; /* Memusatkan konten */
+        }
+
+        .photo-frame {
+          margin-right: 0; /* Menghapus margin pada perangkat kecil */
+          margin-bottom: 20px; /* Menambahkan jarak bawah antara foto dan teks */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Music -->
+    <audio id="birthday-audio" loop>
+      <source
+        src="public/music/Bring_Me_The_Horizon-Drown_Elevator_Edition.mp3"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Play Button -->
+    <button id="play-button">Play Music</button>
+
+    <!-- Main Content -->
+    <div class="container">
+      <h1>
+        Happy Birthday <br />
+        Nia Puji Ramadhani!
+      </h1>
+      <div class="content">
+        <div class="photo-frame">
+          <img id="photo" src="public/images/kiby.jpg" alt="Your photo here" />
+        </div>
+        <div class="message">
+          <p>
+            OMGGGG NIAA HAAIII!!!! Today is your birthday, and like every year,
+            I remember your birthday. Despite everything that's happened between
+            us, I couldn't let the day pass without reaching out to you. So, I
+            sent you this simple message... a "Happy Birthday." It wasn't much,
+            just a few words, but they carried all the weight of the memories we
+            shared and the emotions that I still sometimes feel. (it just
+            happend)
+          </p>
+          <br />
+          <p>
+            You, the one that had grown up over the past years. Time fills you
+            in my heart and living in it. To be my core memory that i saved, to
+            be my person that i look after. I can't forget the moments of you
+            passing by in my memories; it gently fills my eyes, and they become
+            waterfalls.
+          </p>
+          <p>
+            Know that despite every bad thing that happened between us, I feel
+            delighted knowing you.
+          </p>
+          <br />
+          <p>
+            We both grew up better in our own way. This time, I do hope we could
+            be the good persons for each other.
+          </p>
+          <p>
+            Being silly is fun, but it's wonderful too. I hope something good
+            happens to you today. I sincerely wish you happiness. Hope it's nice
+            where you are, always in all ways.
+          </p>
+          <br />
+          <p>Happy birthday niaaaa, you are loved!!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        &copy; 2024 Birthday project. All rights reserved. | Made with ❤️
+        exclusively for a Nia Puji Ramadhani!
+      </p>
+    </footer>
+
+    <!-- JS for audio play -->
+    <script>
+      const audio = document.getElementById("birthday-audio");
+      const playButton = document.getElementById("play-button");
+
+      playButton.addEventListener("click", () => {
+        audio.play();
+        playButton.style.display = "none"; // Sembunyikan tombol setelah diklik
+      });
+    </script>
+  </body>
+</html>
